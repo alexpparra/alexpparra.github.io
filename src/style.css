@@ -120,7 +120,7 @@ h2 button:hover {
 /* TIPOGRAFÍA */
 :root {
   --fuente-principal: "Segoe UI", Arial, sans-serif;
-  --tamano-texto: 16px;
+  --tamano-texto: 24px;
 
   font-family: var(--fuente-principal);
   font-size: var(--tamano-texto);
