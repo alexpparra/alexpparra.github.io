@@ -69,13 +69,11 @@ export default function App(){
   type="button"
   className="theme-toggle"
   onClick={() => setTemaOscuro(actual => !actual)}
+  aria-label={temaOscuro ? 'Activar modo claro' : 'Activar modo oscuro'}
+  title={temaOscuro ? 'Activar modo claro' : 'Activar modo oscuro'}
 >
   <span aria-hidden="true">
     {temaOscuro ? '☀' : '☾'}
-  </span>
-
-  <span>
-    {temaOscuro ? 'Modo claro' : 'Modo oscuro'}
   </span>
 </button>
   <a className="skip" href="#contenido">Saltar al contenido</a>
