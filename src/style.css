@@ -180,3 +180,56 @@ h1 {
   justify-content: center;
   border-radius: 50%;
 }
+
+/* Selector de idioma y botón de tema */
+.page-controls {
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* El contenedor controla ahora la posición del botón de tema */
+.page-controls .theme-toggle {
+  position: static;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 40px;
+  padding: 0;
+
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--fondo-tarjetas, #ffffff);
+  color: var(--texto-principal, #272623);
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.language-toggle:hover {
+  border-color: var(--purple);
+}
+
+@media (max-width: 800px) {
+  .page-controls {
+    top: 12px;
+    right: 12px;
+  }
+}
