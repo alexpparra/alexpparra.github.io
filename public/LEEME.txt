@@ -1,0 +1,1 @@
+Coloca aquí foto.jpg y cv.pdf si quieres usarlos. Después completa sus nombres en src/datos.js.
