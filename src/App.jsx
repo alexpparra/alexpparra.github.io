@@ -24,6 +24,31 @@ function Celda({seccion,numero,children}){
 export default function App(){
  const [activa,setActiva]=useState('news');
  const [fotoError,setFotoError]=useState(false);
+
+ const [temaOscuro, setTemaOscuro] = useState(() => {
+   try {
+     const guardado = localStorage.getItem('tema-pagina');
+
+     if (guardado === 'oscuro') return true;
+     if (guardado === 'claro') return false;
+   } catch {
+     // La página sigue funcionando si no se puede guardar la preferencia.
+   }
+
+   return window.matchMedia('(prefers-color-scheme: dark)').matches;
+ });
+
+ useEffect(() => {
+   const tema = temaOscuro ? 'oscuro' : 'claro';
+
+   document.documentElement.dataset.tema = tema;
+
+   try {
+     localStorage.setItem('tema-pagina', tema);
+   } catch {
+     // Cambiar de tema funciona aunque el almacenamiento esté bloqueado.
+   }
+ }, [temaOscuro]);
  useEffect(()=>{
   let pendiente=0;
   const actualizar=()=>{
@@ -40,6 +65,19 @@ export default function App(){
   return()=>{window.removeEventListener('scroll',programar);window.removeEventListener('resize',programar);observer.disconnect();cancelAnimationFrame(pendiente)};
  },[]);
  return <div className="page">
+  <button
+  type="button"
+  className="theme-toggle"
+  onClick={() => setTemaOscuro(actual => !actual)}
+>
+  <span aria-hidden="true">
+    {temaOscuro ? '☀' : '☾'}
+  </span>
+
+  <span>
+    {temaOscuro ? 'Modo claro' : 'Modo oscuro'}
+  </span>
+</button>
   <a className="skip" href="#contenido">Saltar al contenido</a>
   <header className="hero">
    <div className="portrait">{perfil.foto&&!fotoError?<img src={archivo(perfil.foto)} alt={`Retrato de ${perfil.nombre}`} onError={()=>setFotoError(true)} width="180" height="180"/>:<span aria-label="Espacio para tu fotografía">{perfil.iniciales}</span>}</div>
