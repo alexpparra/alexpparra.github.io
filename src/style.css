@@ -171,3 +171,12 @@ h1 {
     font-size: 30px;
   }
 }
+
+/* Botón circular con solo el icono */
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  justify-content: center;
+  border-radius: 50%;
+}
