@@ -116,3 +116,58 @@ h2 button:hover {
     right: 12px;
   }
 }
+
+/* TIPOGRAFÍA */
+:root {
+  --fuente-principal: "Segoe UI", Arial, sans-serif;
+  --tamano-texto: 16px;
+
+  font-family: var(--fuente-principal);
+  font-size: var(--tamano-texto);
+}
+
+/* Biografía */
+.biography {
+  font-size: var(--tamano-texto);
+}
+
+/* Tu nombre */
+h1 {
+  font-size: 38px;
+}
+
+/* Profesión y universidad */
+.affiliation {
+  font-size: 15px;
+}
+
+/* Títulos de investigaciones y cursos */
+.paper h3,
+.course h3 {
+  font-size: 16px;
+}
+
+/* Descripciones de investigaciones y cursos */
+.paper p,
+.course p {
+  font-size: 15px;
+}
+
+/* Autores y fechas */
+.paper .metadata,
+.course p.date,
+.date {
+  font-size: 12px;
+}
+
+/* Botón de modo oscuro */
+.theme-toggle {
+  font-family: var(--fuente-principal);
+}
+
+/* Tu nombre en celulares */
+@media (max-width: 800px) {
+  h1 {
+    font-size: 30px;
+  }
+}
