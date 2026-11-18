@@ -233,3 +233,12 @@ h1 {
     right: 12px;
   }
 }
+
+/* Acentos que combinan con el círculo de la fotografía */
+:root {
+  --purple: #A03B56;
+}
+
+:root[data-tema="oscuro"] {
+  --purple: #EEA0B5;
+}
