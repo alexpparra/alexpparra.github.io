@@ -5,7 +5,7 @@ export const perfil = {
  cargo:'Ingeniero Ambiental', institucion:'Universidad del Azuay',
  email:'parraalex608@gmail.com',
  // Coloca tus archivos en public/ y escribe foto: 'foto.jpg', cv: 'cv.pdf'.
- foto:'Retrato.jpg', cv:'', scholar:'', github:'https://github.com/alexpparra', linkedin:'https://www.linkedin.com/in/alexpparra25/', x:'',
+ foto:'Retrato.jpg', cv:'CV version 0 - ALEX PATRICIO PARRA URGILES.pdf', scholar:'', github:'https://github.com/alexpparra', linkedin:'https://www.linkedin.com/in/alexpparra25/', x:'',
  actualizado:'Noviembre de 2026',
  biografia:[
  'Escribe aquí tu presentación personal: qué estudias o a qué te dedicas, qué temas investigas y cuál es el objetivo de tu trabajo.',
